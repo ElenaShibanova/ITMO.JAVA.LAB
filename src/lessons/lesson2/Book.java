@@ -1,9 +1,9 @@
 package lessons.lesson2;
 
 public class Book {
-    public String title;
-    public String author;
-    public int year;
+    private String title;
+    private String author;
+    private int year;
 
     public Book() {
     }
@@ -22,4 +22,19 @@ public class Book {
         this.author = author;
         this.year = year;
     }
+    String getTitle(){
+        return title;
+    }
+    String getAuthor(){
+        return author;
+    }
+    int getYear(){
+        return year;
+    }
+    @Override
+    public String toString(){
+        return "Название: "+ title +"; Автор: " + author + "; Год издания: " + year;
+
+    }
+
 }

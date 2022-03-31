@@ -5,11 +5,11 @@ public class TestCalculator{
     {
 
         Calculator calc = new Calculator();
-        int sum1 = calc.Sum(1,5);
+        int sum1 = calc.sum(1,5);
         System.out.println(sum1);
-        double sum2 = calc.Sum( 1.5,-9);
+        double sum2 = calc.sum( 1.5,-9);
         System.out.println(sum2);
-        double divD = calc.Division(9.0,0);
+        double divD = calc.division(9.0,0);
         System.out.println(divD);
 
     }
