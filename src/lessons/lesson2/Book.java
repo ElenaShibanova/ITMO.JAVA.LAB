@@ -22,18 +22,22 @@ public class Book {
         this.author = author;
         this.year = year;
     }
-    String getTitle(){
+
+    String getTitle() {
         return title;
     }
-    String getAuthor(){
+
+    String getAuthor() {
         return author;
     }
-    int getYear(){
+
+    int getYear() {
         return year;
     }
+
     @Override
-    public String toString(){
-        return "Название: "+ title +"; Автор: " + author + "; Год издания: " + year;
+    public String toString() {
+        return "Название: " + title + "; Автор: " + author + "; Год издания: " + year;
 
     }
 
