@@ -4,64 +4,53 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Lab4 {
-    public static void main(String[] args) {
-        System.out.println("---- Задание 1 ----");
+    public static int[] inputArray() {
         System.out.print("Array length: ");
-        boolean flag = true;
         Scanner in = new Scanner(System.in);
-        int len1 = in.nextInt();
-        int[] array1 = new int[len1];
+        int len = in.nextInt();
+        int[] array = new int[len];
         System.out.println("Numbers of array: ");
-        for (int i = 0; i < len1; i++) {
-            array1[i] = in.nextInt();
+        for (int i = 0; i < len; i++) {
+            array[i] = in.nextInt();
         }
+        return array;
+    }
+
+    public static void task1() {
+        System.out.println("\n---- Задание 1 ----");
+        int[] array1 = inputArray();
+        int len1 = array1.length;
+        boolean flag = true;
         for (int i = 0; i < len1 - 1; i++) {
             if (array1[i] > array1[i + 1]) {
-                flag = false;
-                break;
+                System.out.println("Please, try again");
+                return;
             }
         }
-        if (flag) {
-            System.out.println("OK");
-        } else {
-            System.out.println("Please, try again");
-        }
+        System.out.println("OK");
+    }
 
-        System.out.println("---- Задание 2 ----");
-        System.out.print("Array length: ");
-        int len2 = in.nextInt();
-        int[] array2 = new int[len2];
-        System.out.println("Numbers of array: ");
-        for (int i = 0; i < len2; i++) {
-            array2[i] = in.nextInt();
-        }
+    public static void task2() {
+        int[] array2 = inputArray();
         System.out.println("Result: " + Arrays.toString(array2));
+    }
 
-        System.out.println("---- Задание 3 ----");
-        System.out.print("Array length: ");
-        int len3 = in.nextInt();
-        int[] array3 = new int[len3];
-        System.out.println("Numbers of array: ");
-        for (int i = 0; i < len3; i++) {
-            array3[i] = in.nextInt();
-        }
+    public static void task3() {
+        System.out.println("\n---- Задание 3 ----");
+        int[] array3 = inputArray();
+        int len3 = array3.length;
         System.out.println("Array 1 : " + Arrays.toString(array3));
         int element = array3[0];
         array3[0] = array3[len3 - 1];
         array3[len3 - 1] = element;
         System.out.println("Array 2 : " + Arrays.toString(array3));
+    }
 
-        System.out.println("---- Задание 4----");
-        System.out.print("Array length: ");
-        int len4 = in.nextInt();
-        int[] array4 = new int[len4];
-        System.out.println("Numbers of array: ");
-        for (int i = 0; i < len4; i++) {
-            array4[i] = in.nextInt();
-        }
-        in.close();
+    public static void task4() {
+        System.out.println("\n---- Задание 4----");
+        int[] array4 = inputArray();
+        int len4 = array4.length;
         System.out.println("Result: " + Arrays.toString(array4));
-        flag = true;
         for (int element1 : array4) {
             int numEqualElements = 0;
             for (int element2 : array4) {
@@ -71,14 +60,14 @@ public class Lab4 {
             }
             if (numEqualElements == 1) {
                 System.out.println("Первый уникальный элемент в массиве: " + element1);
-                flag = false;
-                break;
+                return;
             }
         }
-        if (flag) {
-            System.out.println("В массиве нет уникальных элементов");
-        }
+        System.out.println( "В массиве нет уникальных элементов");
+        return;
+    }
 
+    public static void task5() {
         System.out.println("---- Задание 5. Пузырьковая сортировка.----");
         int start = 0;
         int end = 1000;
