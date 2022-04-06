@@ -10,10 +10,10 @@ public class Lab5 {
         int lenString = string.length();
         for (int i = 0; i < lenString; i++) {
             if (!Character.isLetter(string.charAt(i))) {
-                if ( max < len) {
+                if (max < len) {
                     max = len;
                 }
-                    len = 0;
+                len = 0;
             } else {
                 len++;
                 if (i == lenString - 1 && max < len) {
@@ -21,7 +21,6 @@ public class Lab5 {
                     len = 0;
                 }
             }
-
         }
         return max;
     }
