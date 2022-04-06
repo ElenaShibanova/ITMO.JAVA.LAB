@@ -4,25 +4,30 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Lab5 {
-    public static int task1(String string) {
+    public static String task1(String string) {
         int max = 0;
         int len = 0;
         int lenString = string.length();
+        String word = "";
+        String maxWord = "";
         for (int i = 0; i < lenString; i++) {
-            if (!Character.isLetter(string.charAt(i))) {
+            char charInString = string.charAt(i);
+            if (!Character.isLetter(charInString)) {
                 if (max < len) {
                     max = len;
+                    maxWord = word;
                 }
                 len = 0;
+                word = "";
             } else {
                 len++;
+                word = word + charInString;
                 if (i == lenString - 1 && max < len) {
-                    max = len;
-                    len = 0;
+                    maxWord = word;
                 }
             }
         }
-        return max;
+        return maxWord;
     }
 
     public static boolean task2(String string) {
@@ -55,5 +60,4 @@ public class Lab5 {
         }
         System.out.println("The string reversed word by word is: " + stringRev);
     }
-
 }
