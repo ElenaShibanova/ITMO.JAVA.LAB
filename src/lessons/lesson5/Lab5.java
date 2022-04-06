@@ -8,22 +8,22 @@ public class Lab5 {
         int max = 0;
         int len = 0;
         int lenString = string.length();
-        String word = "";
         String maxWord = "";
+        StringBuilder word = new StringBuilder();
         for (int i = 0; i < lenString; i++) {
             char charInString = string.charAt(i);
             if (!Character.isLetter(charInString)) {
                 if (max < len) {
                     max = len;
-                    maxWord = word;
+                    maxWord = word.toString();
                 }
                 len = 0;
-                word = "";
+                word.setLength(0);
             } else {
                 len++;
-                word = word + charInString;
+                word = word.append(charInString);
                 if (i == lenString - 1 && max < len) {
-                    maxWord = word;
+                    maxWord = word.toString();
                 }
             }
         }
