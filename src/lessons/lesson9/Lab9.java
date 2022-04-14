@@ -31,7 +31,7 @@ public class Lab9 {
 
     }
 
-    public static void oneThousandTime(String string) {
+    public static void searchTime(String string) {
         List list = oneMillionElements(string);
         Random random = new Random();
         long time = System.currentTimeMillis();

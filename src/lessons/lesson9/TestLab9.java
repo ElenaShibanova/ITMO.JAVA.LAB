@@ -11,8 +11,8 @@ public class TestLab9 {
         System.out.println(Lab9.noDuplicates(list2));
 
         System.out.println("----Задание 3----");
-        Lab9.oneThousandTime("arrayList");
-        Lab9.oneThousandTime("linkedList");
+        Lab9.searchTime("arrayList");
+        Lab9.searchTime("linkedList");
 
         System.out.println("----Задание 4----");
         User ivan = new User();
