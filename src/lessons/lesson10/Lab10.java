@@ -16,16 +16,6 @@ public class Lab10 {
         } catch (IOException e) {
             e.printStackTrace();
         }
-//        try(FileInputStream fis = new FileInputStream(file)){
-//            while (fis.available() > 0) {
-//                stringList.add(fis.read());
-//
-//            }
-//        } catch (FileNotFoundException e) {
-//            e.printStackTrace();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         return stringList;
     }
 
