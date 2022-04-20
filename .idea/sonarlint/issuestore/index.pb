@@ -49,5 +49,6 @@ Z
 .src/lessons/lesson6/task1task2/TestPerson.java,f\d\fdef6c8effa2dda69a22ac5da99b7308fcb50266
 T
 $src/lessons/lesson6/task3/Truck.java,3\0\30764ceaf29a90b96e66b7dce55bb3e5e9633e52
-Q
-!src/lessons/lesson7/Airplain.java,a\5\a5167ff4cfecfa8149b067aeed756ebd6c56deda
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
