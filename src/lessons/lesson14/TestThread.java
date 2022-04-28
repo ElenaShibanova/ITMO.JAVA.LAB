@@ -32,16 +32,10 @@ public class TestThread {
         System.out.println("count = " + counter.getCount());
 
         System.out.println("----Задание 4----");
-//        NameThread thread1 = new NameThread();
-//        NameThread thread2 = new NameThread();
-//        thread1.start();
-////        try {
-////            thread1.wait();
-////        } catch (InterruptedException e) {
-////            e.printStackTrace();
-////        }
-//        thread2.start();
-//        thread1.notify();
+        NameThread thread1 = new NameThread();
+        NameThread thread2 = new NameThread();
+        thread1.start();
+        thread2.start();
 
     }
 }

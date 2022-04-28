@@ -3,17 +3,20 @@ package lessons.lesson14;
 public class NameThread extends Thread {
     @Override
     public void run() {
-        int i = 0;
-        while (i < 100){
-            i++;
-            currentThread().notify();
-            System.out.println("Name of thread: " + currentThread().getName());
-            try {
-                currentThread().wait();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        synchronized (System.out) {
+            int i = 0;
+            while (i < 50) {
+                i++;
+                System.out.println("Name of thread: " + currentThread().getName());
+                System.out.notify();
+                try {
+                    System.out.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
 
 }
+
